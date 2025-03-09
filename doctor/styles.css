@@ -49,6 +49,16 @@ body {
 }
 
 /* Buttons */
+.book-btn a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .btn {
   background: linear-gradient(90deg, #26de81, #20bf6b);
   color: white;
@@ -66,18 +76,16 @@ body {
   box-shadow: 0px 5px 15px rgba(32, 191, 107, 0.4);
 }
 
-/* Hero Section */
+/* Hero Section Styling */
 .hero {
-  background: linear-gradient(to right, #0652DD, #0097e6);
+  background: linear-gradient(135deg, #007bff, #00b894); /* Blue-Green Gradient */
   color: white;
-  padding: 100px 50px;
   text-align: center;
-  margin-top: 70px;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
-  animation: fadeIn 1s ease-in-out;
+  padding: 100px 20px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
 }
-
 .hero h1 {
   font-size: 42px;
   margin-bottom: 20px;
@@ -221,4 +229,174 @@ footer {
       opacity: 1;
       transform: translateY(0);
   }
+}
+
+
+/*schedule*/
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #F0F8FF;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0275D8;
+    padding: 15px 50px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn {
+    background-color: #04C35C;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #028F42;
+}
+
+/* Doctor Profile */
+.doctor-profile {
+    background: linear-gradient(135deg, #0275D8, #04C35C);
+    padding: 80px 40px;
+    text-align: center;
+    color: white;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.doctor-img {
+    width: 180px;
+    border-radius: 50%;
+    border: 4px solid white;
+}
+
+.doctor-info {
+    max-width: 500px;
+    text-align: left;
+}
+
+/* Booking Section */
+.booking {
+    background: white;
+    padding: 50px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 50px auto;
+    max-width: 600px;
+}
+
+.calendar-container {
+    margin: 20px 0;
+}
+
+.date-picker {
+    width: 80%;
+    padding: 10px;
+    border: 2px solid #0275D8;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.time-slots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.time-btn {
+    background-color: #D9F2FF;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.time-btn:hover {
+    background-color: #0275D8;
+    color: white;
+}
+
+.time-btn.selected {
+    background-color: #0275D8;
+    color: white;
+    font-weight: bold;
+}
+
+/* Related Doctors */
+.related-doctors {
+    background: #F5F9FF;
+    padding: 40px;
+    text-align: center;
+}
+
+.doctor-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.doctor-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-card h3 {
+    color: #0275D8;
+}
+
+/* Footer */
+footer {
+    background: #0275D8;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
 }

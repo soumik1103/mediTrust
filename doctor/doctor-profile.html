@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediTrust - Doctor Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">MediTrust</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">All Doctors</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="btn">Login</button>
+    </header>
+
+    <!-- Doctor Profile Section -->
+    <section class="doctor-profile">
+        <div class="profile-container">
+            <img src="doctor.png" alt="Doctor Image" class="doctor-img">
+            <div class="doctor-info">
+                <h1>Dr. Ramesh Iyer <span class="verified">✔</span></h1>
+                <p><strong>Specialization:</strong> Cardiologist</p>
+                <p><strong>Experience:</strong> 15+ years</p>
+                <p><strong>About:</strong> A leading expert in heart disease treatments and preventive care.</p>
+                <p><strong>Consultation Fee:</strong> ₹ 500</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Slots (Selectable Time) -->
+    <section class="booking">
+        <h2>Book Your Appointment</h2>
+        <div class="calendar-container">
+            <input type="date" class="date-picker">
+        </div>
+        <h3>Select a Time Slot</h3>
+        <div class="time-slots">
+            <button class="time-btn" onclick="selectTime(this)">10:00 AM</button>
+            <button class="time-btn" onclick="selectTime(this)">11:30 AM</button>
+            <button class="time-btn" onclick="selectTime(this)">2:00 PM</button>
+            <button class="time-btn" onclick="selectTime(this)">4:00 PM</button>
+            <button class="time-btn" onclick="selectTime(this)">6:00 PM</button>
+        </div>
+        <button class="btn" id="confirm-btn">Confirm Appointment</button>
+    </section>
+
+    <!-- Related Doctors Section -->
+    <section class="related-doctors">
+        <h2>Related Doctors</h2>
+        <div class="doctor-list">
+            <div class="doctor-card">
+                <h3>Dr. Sunita Mehta</h3>
+                <p>Cardiologist</p>
+                <button class="btn">View Profile</button>
+            </div>
+            <div class="doctor-card">
+                <h3>Dr. Nikhil Joshi</h3>
+                <p>Dermatologist</p>
+                <button class="btn">View Profile</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright © 2025 MediTrust. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function selectTime(button) {
+            let buttons = document.querySelectorAll(".time-btn");
+            buttons.forEach(btn => btn.classList.remove("selected"));
+            button.classList.add("selected");
+
+            let confirmBtn = document.getElementById("confirm-btn");
+            confirmBtn.innerText = "Confirm Appointment at " + button.innerText;
+        }
+    </script>
+
+</body>
+</html>
